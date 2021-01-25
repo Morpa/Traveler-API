@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "places",
   "info": {
-    "name": "places"
+    "name": "places",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -32,6 +33,24 @@
     },
     "addresses": {
       "model": "addresses"
+    },
+    "weekDays": {
+      "type": "enumeration",
+      "enum": [
+        "domingo",
+        "segunda",
+        "terca",
+        "quarta",
+        "quinta",
+        "sexta",
+        "sabado"
+      ]
+    },
+    "open": {
+      "type": "time"
+    },
+    "close": {
+      "type": "time"
     }
   }
 }
