@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "depositions",
+  "info": {
+    "name": "depositions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "city": {
+      "model": "cities"
+    },
+    "place": {
+      "model": "places"
+    }
+  }
+}
